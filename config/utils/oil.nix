@@ -8,14 +8,19 @@
         showHidden = true;
       };
       preview = {
-        border = "rounded";
+        border = "single";
       };
+      columns = [
+      	"permissions"
+	"size"
+	"mtime"
+      ];
 
       float = {
         padding = 2;
         maxWidth = 0; # ''math.ceil(vim.o.lines * 0.8 - 4)'';
         maxHeight = 0; # ''math.ceil(vim.o.columns * 0.8)'';
-        border = "rounded"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+        border = "single"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
         winOptions = {
           winblend = 0;
         };
@@ -44,7 +49,8 @@
     {
       mode = "n";
       key = "<leader>o";
-      action = ":Oil --float<CR>";
+      # action = ":Oil --float<CR>";
+      action = ":Oil<CR>";
       options = {
         desc = "Open parent directory";
         silent = true;

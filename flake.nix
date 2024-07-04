@@ -1,21 +1,44 @@
 {
-	description = "My Neovim config flake";
+	description = "A very basic flake";
 
 	inputs = {
-		nixpkgs = {
-			url = "github:NixOS/nixpkgs";
-		};
-		neovim = {
-			url = "github:neovim/neovim/stable?dir=contrib";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		nixvim.url = "github:nix-community/nixvim";
+		flake-parts.url = "github:hercules-ci/flake-parts";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 	};
 
-	outputs = { self, nixpkgs, neovim, ... }@inputs: {
-		packages.x86_64-linux.default = neovim.packages.x86_64-linux.neovim;
-      		apps.x86_64-linux.default = {
-        		type = "app";
-        		program = "${neovim.packages.x86_64-linux.neovim}/bin/nvim";
-      		};
+	outputs = {
+		self,
+		nixvim,
+		flake-parts,
+		nixpkgs,
+	} @ inputs: flake-parts.lib.mkFlake {inherit inputs;} {
+		systems = [
+			"aarch64-darwin"
+			"aarch64-linux"
+			"x86_64-darwin"
+			"x86_64-linux"
+		];
+
+		perSystem = {
+			pkgs,
+			system,
+			...
+		}: let
+			nixvim' = nixvim.legacyPackages."${system}";
+			# nvim = nixvim'.makeNixvim config;
+			nvim = nixvim'.makeNixvimWithModule {
+				inherit pkgs;
+				module = import ./config;
+				extraSpecialArgs = {
+					inherit self;
+				};
+			};
+		in {
+			packages = {
+				inherit nvim;
+				default = nvim;
+			};
+		};
 	};
 }

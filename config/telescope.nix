@@ -20,6 +20,10 @@
 		# If you'd prefer Telescope not to enter a normal-like mode when hitting escape (and instead exiting), you can map <Esc> to do so via:
 		settings = {
 			defaults = {
+				color_devicons = false;
+        border = true;
+        prompt_title = "";
+        results_title = null;
 				mappings = {
 					i = {
 						"<esc>" = {
@@ -61,7 +65,7 @@
 				action = "buffers";
 				options.desc = "Buffers";
 			};
-			"<C-p>" = {
+			"<leader>gf" = {
 				action = "git_files";
 				options.desc = "Search git files";
 			};
@@ -81,18 +85,14 @@
 				action = "current_buffer_fuzzy_find";
 				options.desc = "Buffer";
 			};
-			"<leader>sc" = {
-				action = "command_history";
-				options.desc = "Command History";
-			};
-			"<leader>sC" = {
-				action = "commands";
-				options.desc = "Commands";
-			};
-			"<leader>sD" = {
+			"<leader>d" = {
 				action = "diagnostics";
 				options.desc = "Workspace diagnostics";
 			};
+      "<leader>ds" = {
+        action = "lsp_document_symbols";
+        options.desc = "Lsp document symbols";
+      };
 			"<leader>sh" = {
 				action = "help_tags";
 				options.desc = "Help pages";
@@ -119,4 +119,12 @@
 			};
 		};
 	};
+  extraConfigLua = ''
+    local telescope = require('telescope')
+    telescope.setup{
+        defaults = {
+          disable_devicons = true,
+        }
+    }
+  '';
 }

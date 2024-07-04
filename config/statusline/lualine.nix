@@ -2,17 +2,18 @@
   plugins.lualine = {
     enable = true;
     alwaysDivideMiddle = true;
+    iconsEnabled = false;
     globalstatus = true;
     ignoreFocus = ["neo-tree"];
     extensions = ["fzf"];
     theme = "auto";
     componentSeparators = {
-      left = "  ";
-      right = "  ";
+      left = "";
+      right = "";
     };
     sectionSeparators = {
-      left = "    ";
-      right = "    ";
+      left = "";
+      right = "";
     };
     sections = {
       lualine_a = ["mode"];
@@ -25,8 +26,8 @@
         "diagnostics"
       ];
       lualine_c = ["filename"];
-      lualine_x = ["filetype"];
-      lualine_y = ["progress"];
+      lualine_y = ["filetype"];
+      lualine_z = ["progress"];
     };
   };
 }

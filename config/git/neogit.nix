@@ -5,7 +5,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>gg";
+      key = "<leader>ng";
       action = "<cmd>Neogit<CR>";
     }
   ];

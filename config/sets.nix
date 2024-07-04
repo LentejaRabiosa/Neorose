@@ -7,7 +7,7 @@
 
 			tabstop = 2;
 		        softtabstop = 2;
-		        showtabline = 2;
+		        showtabline = 0;
 		        expandtab = true;
 
 		        smartindent = true;
@@ -50,7 +50,7 @@
 
 			colorcolumn = "80";
 
-		        timeoutlen = 10;
+		        # timeoutlen = 10;
 
 		        encoding = "utf-8";
 		        fileencoding = "utf-8";
@@ -58,9 +58,9 @@
 			# list = true; # Show invisible characters (tabs, eol, ...)
       			# listchars = "eol:↲,tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
 
-			cmdheight = 2;
+			cmdheight = 1;
 
-			# showmode = false;
+			showmode = false;
 
 			pumheight = 0;
 		};

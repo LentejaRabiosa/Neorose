@@ -8,7 +8,47 @@
 					bold = true;
 					transparency = true;
 				};
+        highlight_groups = {
+          TelescopeNormal = {
+            bg = "surface";
+          };
+          TelescopeBorder = {
+            bg = "surface";
+            fg = "surface";
+          };
+          TelescopePromptNormal = {
+            bg = "base";
+          };
+          TelescopePromptBorder = {
+            bg = "base";
+            fg = "base";
+          };
+          TelescopePromptTitle = {
+            fg = "base";
+          };
+          TelescopePreviewTitle = {
+            fg = "surface";
+          };
+          TelescopeResultsTitle = {
+            fg = "surface";
+          };
+        };
 			};
 		};
 	};
+	# extraConfigLua = ''
+	# 	require('rose-pine').setup({
+	# 	      TelescopeMatching = { fg = colors.blue },
+  #   			TelescopePreviewBorder = { bg = preview, fg = preview },
+  #   			TelescopePreviewNormal = { bg = preview },
+  #   			TelescopePreviewTitle = { fg = preview },
+  #   			TelescopePromptBorder = { bg = prompt, fg = prompt },
+  #   			TelescopePromptNormal = { bg = prompt },
+  #   			TelescopePromptPrefix = { bg = prompt },
+  #   			TelescopePromptTitle = { fg = prompt },
+  #   			TelescopeResultsBorder = { bg = results, fg = results },
+  #   			TelescopeResultsNormal = { bg = results },
+  #   			TelescopeResultsTitle = { fg = results },
+	# 	})
+	# '';
 }

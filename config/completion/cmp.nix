@@ -20,11 +20,13 @@
             cmp.mapping.preset.insert({
             ['<C-j>'] = cmp.mapping.select_next_item(),
             ['<C-k>'] = cmp.mapping.select_prev_item(),
+            ['<Tab>'] = cmp.mapping.select_next_item(),
+            ['<S-Tab>'] = cmp.mapping.select_prev_item(),
             ['<C-e>'] = cmp.mapping.abort(),
 
-            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+            ['<C-w>'] = cmp.mapping.scroll_docs(-4),
 
-             ['<C-f>'] = cmp.mapping.scroll_docs(4),
+             ['<C-s>'] = cmp.mapping.scroll_docs(4),
 
              ['<C-Space>'] = cmp.mapping.complete(),
 
@@ -57,11 +59,16 @@
         };
         window = {
           completion = {
-            # border = "rounded";
+	    # solid
+	    # single
+	    # double
+	    # rounded
+	    # shadow
+            border = "single";
             winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None";
           };
           documentation = {
-            # border = "rounded";
+            border = "single";
           };
         };
         formatting = {

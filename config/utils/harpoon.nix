@@ -5,12 +5,13 @@
 		keymapsSilent = true;
 		keymaps = {
 			addFile = "<leader>ha";
-			toggleQuickMenu = "<C-e>";
+			toggleQuickMenu = "<leader>hh";
 			navFile = {
-				"1" = "<leader>hj";
-				"2" = "<leader>hk";
-				"3" = "<leader>hl";
-				"4" = "<leader>hm";
+				"1" = "<leader>1";
+				"2" = "<leader>2";
+				"3" = "<leader>3";
+				"4" = "<leader>4";
+				"5" = "<leader>5";
 			};
 		};
 	};
