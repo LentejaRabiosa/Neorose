@@ -24,6 +24,6 @@ This is just my personal configuration to meet my needs. Any advice is welcome a
 > [!WARNING] 
 > The use of flakes is required for this installation.
 
-1. *flake.nix* `inputs.neorose.url = "github:LentejaRabiosa/neorose";`
+1. **flake.nix** `inputs.neorose.url = "github:LentejaRabiosa/neorose";`
 2. Install it by adding `inputs.Neve.packages.${pkgs.system}.default` to your `environment.systemPackages` or `home.packages` if you're using home-manager.
 3. Rebuild.
