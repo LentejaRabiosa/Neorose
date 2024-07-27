@@ -55,8 +55,9 @@
 						};
 					};
 				};
-				# eslint = {enable = true;};
+				eslint = {enable = true;};
 				pyright = {enable = true;};
+        volar = {enable = true;};
 				# ruff-lsp = {enable = true;};
 
 				rust-analyzer = {
