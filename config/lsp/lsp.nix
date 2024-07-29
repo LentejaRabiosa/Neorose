@@ -27,7 +27,7 @@
 				nil-ls = { enable = true; };
 				tsserver = {
 					enable = true;
-					filetypes = ["javascript" "javascriptreact" "typescript" "typescriptreact" "vue"];
+					filetypes = ["javascript" "javascriptreact" "typescript" "typescriptreact"];
 					extraOptions = {
 						settings = {
 							javascript = {
@@ -54,24 +54,24 @@
 							};
 						};
 					};
-          extraOptions = {
-            init_options = {
-              plugins = [
-                {
-                  name = "@vue/typescript-plugin";
-                  location = "${lib.getBin pkgs.vue-language-server}/lib/node_modules/@vue/language-server";
-                  languages = [ "vue" ];
-                }
-              ];
-            };
-          };
+          # extraOptions = {
+          #   init_options = {
+          #     plugins = [
+          #       {
+          #         name = "@vue/typescript-plugin";
+          #         location = "${lib.getBin pkgs.vue-language-server}/lib/node_modules/@vue/language-server";
+          #         languages = [ "vue" ];
+          #       }
+          #     ];
+          #   };
+          # };
 				};
 				eslint = { enable = true; };
 				pyright = { enable = true; };
-        volar = {
-          enable = true;
-          package = pkgs.vue-language-server;
-        };
+        # volar = {
+        #   enable = true;
+        #   package = pkgs.vue-language-server;
+        # };
 				# ruff-lsp = {enable = true;};
 
 				rust-analyzer = {
