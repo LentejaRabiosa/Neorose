@@ -27,7 +27,7 @@
 				nil-ls = { enable = true; };
 				tsserver = {
 					enable = true;
-					filetypes = ["javascript" "javascriptreact" "typescript" "typescriptreact"];
+					filetypes = ["javascript" "javascriptreact" "typescript" "typescriptreact" "vue"];
 					extraOptions = {
 						settings = {
 							javascript = {
@@ -55,18 +55,18 @@
 						};
 					};
 				};
-				eslint = { enable = true; };
+				# eslint = { enable = true; };
 				pyright = { enable = true; };
         volar = {
           enable = true;
-          filetypes = [
-            "typescript"
-            "javascript"
-            "javascriptreact"
-            "typescriptreact"
-            "vue"
-            "json"
-          ];
+          # filetypes = [
+          #   "typescript"
+          #   "javascript"
+          #   "javascriptreact"
+          #   "typescriptreact"
+          #   "vue"
+          #   "json"
+          # ];
         };
 				# ruff-lsp = {enable = true;};
 
