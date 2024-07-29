@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
 	plugins = {
 		lsp-format = {
 			enable = false; # Enable it if you want lsp-format integration for none-ls
