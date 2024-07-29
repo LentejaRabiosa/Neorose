@@ -55,9 +55,19 @@
 						};
 					};
 				};
-				eslint = {enable = true;};
-				pyright = {enable = true;};
-        volar = {enable = true;};
+				eslint = { enable = true; };
+				pyright = { enable = true; };
+        volar = {
+          enable = true;
+          filetypes = [
+            "typescript"
+            "javascript"
+            "javascriptreact"
+            "typescriptreact"
+            "vue"
+            "json"
+          ];
+        };
 				# ruff-lsp = {enable = true;};
 
 				rust-analyzer = {
