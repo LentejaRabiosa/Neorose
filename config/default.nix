@@ -21,7 +21,8 @@
 		./telescope.nix
 		./rose-pine.nix
 
-    		./utils/harpoon.nix
+    ./utils/harpoon.nix
+    ./utils/spider.nix
 		./utils/oil.nix
 		./utils/undotree.nix
 		./utils/ultimate-autopair.nix
