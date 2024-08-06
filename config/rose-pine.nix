@@ -17,14 +17,14 @@
             fg = "surface";
           };
           TelescopePromptNormal = {
-            bg = "base";
+            bg = "overlay";
           };
           TelescopePromptBorder = {
-            bg = "base";
-            fg = "base";
+            bg = "overlay";
+            fg = "overlay";
           };
           TelescopePromptTitle = {
-            fg = "base";
+            fg = "overlay";
           };
           TelescopePreviewTitle = {
             fg = "surface";
