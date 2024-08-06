@@ -101,7 +101,7 @@
 				action = "highlights";
 				options.desc = "Search Highlight Groups";
 			};
-			"<leader>sk" = {
+			"<leader>km" = {
 				action = "keymaps";
 				options.desc = "Keymaps";
 			};
