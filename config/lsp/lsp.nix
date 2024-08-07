@@ -1,4 +1,6 @@
 { pkgs, lib, ... }: {
+  # extraPlugins = with pkgs; [ deno typescript ];
+
 	plugins = {
 		lsp-format = {
 			enable = false; # Enable it if you want lsp-format integration for none-ls
@@ -54,26 +56,26 @@
 							};
 						};
 					};
-          # extraOptions = {
-          #   init_options = {
-          #     plugins = [
-          #       {
-          #         name = "@vue/typescript-plugin";
-          #         location = "${lib.getBin pkgs.vue-language-server}/lib/node_modules/@vue/language-server";
-          #         languages = [ "vue" ];
-          #       }
-          #     ];
-          #   };
-          # };
+          extraOptions = {
+            init_options = {
+              plugins = [
+                {
+                  name = "@vue/typescript-plugin";
+                  location = "${lib.getBin pkgs.vue-language-server}/lib/node_modules/@vue/language-server";
+                  languages = [ "vue" ];
+                }
+              ];
+            };
+          };
 				};
 				eslint = { enable = true; };
         cssls = { enable = true; };
 				pyright = { enable = true; };
         volar = {
           enable = true;
-          # package = pkgs.vue-language-server;
-          filetypes = [ "typescript" "javascript" "javascriptreact" "typescriptreact" "vue" ];
-          extraOptions.init_options.vue.hybridMode = false;
+          package = pkgs.vue-language-server;
+          # filetypes = [ "typescript" "javascript" "javascriptreact" "typescriptreact" "vue" ];
+          # extraOptions.init_options.vue.hybridMode = false;
         };
 				# ruff-lsp = {enable = true;};
 
